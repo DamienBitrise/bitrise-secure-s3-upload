@@ -26,30 +26,35 @@ inputs:
 - client_id: 
   opts:
     title: S3 Client ID
+    summary: S3 Client ID
     description: S3 Client ID
     is_required: true
     is_sensitive: true
 - secret: 
   opts:
     title: S3 Secret
+    summary: S3 Secret
     description: S3 Secret
     is_required: true
     is_sensitive: true
 - bucket: 
   opts:
     title: S3 Bucket
+    summary: S3 Bucket
     description: S3 Bucket
     is_required: true
     is_sensitive: true
 - region: 
   opts:
     title: S3 Region
+    summary: S3 Region
     description: S3 Region
     is_required: true
     is_sensitive: true
 - filename: 
   opts:
     title: S3 Filename
+    summary: S3 Filename
     description: S3 Filename
     is_required: true
     is_sensitive: false
