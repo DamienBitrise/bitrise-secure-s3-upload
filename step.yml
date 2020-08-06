@@ -54,16 +54,15 @@ inputs:
 - object: 
   opts:
     title: S3 Object
-    summary: S3 Object
-    description: S3 Object
+    summary: S3 Object to save as
+    description: S3 Object to save as
     is_required: true
     is_sensitive: false
 - filename: 
   opts:
     title: S3 Filename
-    summary: S3 Filename
-    description: S3 Filename
+    summary: S3 Filename to upload
+    description: S3 Filename to upload
     is_required: true
     is_sensitive: false
-outputs:
 outputs:
