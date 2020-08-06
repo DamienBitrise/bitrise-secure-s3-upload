@@ -25,32 +25,32 @@ run_if: ".IsCI"
 inputs:
 - client_id: 
   opts:
-    title: 
-    description: 
+    title: S3 Client ID
+    description: S3 Client ID
     is_required: true
     is_sensitive: true
 - secret: 
   opts:
-    title: 
-    description: 
+    title: S3 Secret
+    description: S3 Secret
     is_required: true
     is_sensitive: true
 - bucket: 
   opts:
-    title: 
-    description: 
+    title: S3 Bucket
+    description: S3 Bucket
     is_required: true
     is_sensitive: true
 - region: 
   opts:
-    title: 
-    description: 
+    title: S3 Region
+    description: S3 Region
     is_required: true
     is_sensitive: true
 - filename: 
   opts:
-    title: 
-    description: 
+    title: S3 Filename
+    description: S3 Filename
     is_required: true
-    is_sensitive: true
+    is_sensitive: false
 outputs:
