@@ -8,8 +8,6 @@ begin
   params.print
   params.validate
 
-  Log.verbose = (params.verbose_log == 'yes')
-
   Log.debug("Bucket: #{params.bucket}")
   Log.debug("Region: #{params.region}")
 
