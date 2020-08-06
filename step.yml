@@ -43,14 +43,21 @@ inputs:
     summary: S3 Bucket
     description: S3 Bucket
     is_required: true
-    is_sensitive: true
+    is_sensitive: false
 - region: 
   opts:
     title: S3 Region
     summary: S3 Region
     description: S3 Region
     is_required: true
-    is_sensitive: true
+    is_sensitive: false
+- object: 
+  opts:
+    title: S3 Object
+    summary: S3 Object
+    description: S3 Object
+    is_required: true
+    is_sensitive: false
 - filename: 
   opts:
     title: S3 Filename
@@ -58,4 +65,5 @@ inputs:
     description: S3 Filename
     is_required: true
     is_sensitive: false
+outputs:
 outputs:

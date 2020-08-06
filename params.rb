@@ -4,6 +4,7 @@ class Params
   attr_accessor :secret
   attr_accessor :bucket
   attr_accessor :region
+  attr_accessor :object
   attr_accessor :filename
 
   def initialize
@@ -20,6 +21,7 @@ class Params
     Log.print("secret: #{Log.secure_value(@secret)}")
     Log.print("bucket: #{@bucket}")
     Log.print("region: #{@region}")
+    Log.print("object: #{@object}")
     Log.print("filename: #{@filename}")
   end
 
@@ -28,6 +30,7 @@ class Params
     raise 'missing: secret' if @secret.to_s.empty?
     raise 'missing: bucket' if @bucket.to_s.empty?
     raise 'missing: region' if @region.to_s.empty?
+    raise 'missing: object' if @object.to_s.empty?
     raise 'missing: filename' if @filename.to_s.empty?
   end
 end

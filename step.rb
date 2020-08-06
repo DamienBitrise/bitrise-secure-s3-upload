@@ -8,20 +8,15 @@ begin
   params.print
   params.validate
 
-  Log.debug("Bucket: #{params.bucket}")
-  Log.debug("Region: #{params.region}")
-
-  if params.bucket.to_s.empty? || params.region.to_s.empty? || params.client_id.to_s.empty? || params.filename.to_s.empty? || params.secret.to_s.empty?
+  if params.bucket.to_s.empty? || params.region.to_s.empty? || params.client_id.to_s.empty?|| params.secret.to_s.empty? || params.object.to_s.empty?  || params.filename.to_s.empty? 
     raise 'Error: Not all fields set cannot proceed!'
   end
-  
-  filename = ENV['BITRISE_BUILD_SLUG'] + '.zip'
 
   s3 = Aws::S3::Resource.new(region: params.region, credentials: Aws::Credentials.new(params.client_id, params.secret))
 
-  obj = s3.bucket(params.bucket).object(filename)
+  obj = s3.bucket(params.bucket).object(params.filename)
 
-  obj.upload_file(params.filename)
+  obj.upload_file(params.object)
 rescue => ex
   puts
   Log.error('Error:')
