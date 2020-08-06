@@ -12,6 +12,7 @@ class Params
     @secret = ENV['secret']
     @bucket = ENV['bucket']
     @region = ENV['region']
+    @object = ENV['object']
     @filename = ENV['filename']
   end
 
